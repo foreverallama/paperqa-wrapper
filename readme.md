@@ -2,7 +2,7 @@
 
 ## 📄 Project Overview
 
-This project provides a **wrapper around [PaperQA](https://github.com/Future-House/paper-qa)**, an Retrieval-Augmented Generation (RAG) pipeline centred around academic papers. This project aims to make scientific literature more accessible and interactive, enabling researchers to quickly find relevant information from large datasets of academic publications.
+This project provides a **wrapper around [PaperQA](https://github.com/Future-House/paper-qa)**, a Retrieval-Augmented Generation (RAG) pipeline centred around academic papers. This project aims to make scientific literature more accessible and interactive, enabling researchers to quickly find relevant information from large datasets of academic publications.
 
 This wrapper was specifically written to suit my requirements with minimal setup, allowing seamless integration with any LLM run with ollama or GPT models. The wrapper adds some control over your PDF embeddings, support for reasoning LLMs (like the new DeepSeek R1), and some formatting of the responses. This project includes the **PaperQA** module as a submodule (forked from the original repository). The forked repository contains changes for this use case.
 
@@ -115,7 +115,7 @@ python main.py query "What are some possible research challenges in deep learnin
 
 ## ❓ Why Use PaperQA?
 
-Scientific research involves reviewing and analyzing a large number of papers, which can be overwhelming. While AI tools like ChatGPT are popular, simply uploading PDFs to them**does not ensure reliable, source-backed answers**—it only provides general information, which may not come from your own documents.
+Scientific research involves reviewing and analyzing a large number of papers, which can be overwhelming. While AI tools like ChatGPT are popular, simply uploading PDFs to them **does not ensure reliable, source-backed answers**—it only provides general information, which may not come from your own documents.
 
 PaperQA helps solve this problem by allowing you to **ask specific questions directly to your collection of PDFs**. Instead of returning broad, general AI-generated responses, PaperQA finds the most relevant sections from your papers, extracts key information, and presents an answer with proper citations. This ensures that every response is backed by sources you provide.
 
