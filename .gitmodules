@@ -1,0 +1,3 @@
+[submodule "paperqa"]
+	path = paperqa
+	url = https://github.com/foreverallama/paper-qa
