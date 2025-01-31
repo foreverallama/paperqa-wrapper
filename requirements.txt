@@ -1,0 +1,6 @@
+colorama
+paper-qa==5.11.0
+pydantic
+argparse
+logging
+pickle
