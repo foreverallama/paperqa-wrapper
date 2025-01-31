@@ -4,17 +4,23 @@
 
 This project provides a **wrapper around [PaperQA](https://github.com/Future-House/paper-qa)**, an Retrieval-Augmented Generation (RAG) pipeline centred around academic papers. This project aims to make scientific literature more accessible and interactive, enabling researchers to quickly find relevant information from large datasets of academic publications.
 
-This wrapper was specifically written to suit my requirements with minimal setup, allowing seamless integration with any LLM run with ollama or GPT models. The wrapper adds some control over your PDF embeddings, support for reasoning LLMs (like the new DeepSeek R1), and some formatting of the responses.
+This wrapper was specifically written to suit my requirements with minimal setup, allowing seamless integration with any LLM run with ollama or GPT models. The wrapper adds some control over your PDF embeddings, support for reasoning LLMs (like the new DeepSeek R1), and some formatting of the responses. This project includes the **PaperQA** module as a submodule (forked from the original repository). The forked repository contains changes for this use case.
 
 ---
 
 ## 🛠 Installation
 
-### 1. Clone the Repository
+### 1. Clone the Repository and initialize all submodules
 
 ```bash
-git clone https://github.com/yourusername/paperqa-wrapper.git
+git clone --recursive https://github.com/foreverallama/paperqa-wrapper
 cd paperqa-wrapper
+```
+
+If you've already cloned the repository but didn't initialize the submodule, you can do so by running
+
+```
+git submodule update --init --recursive
 ```
 
 ### 2. Set Up Conda Environment
@@ -31,6 +37,17 @@ conda activate paperqa-env
 ```bash
 pip install -r requirements.txt
 ```
+
+#### Install the Modified PaperQA Submodule
+
+The submodule is a fork of the original repository with some slight modifications to `paperqa/sources/core.py`. These modifications are used to better handle the LLM responses. To install this version, navigate to the paperqa directory and install with pip:
+
+```
+cd paperqa
+pip install .
+```
+
+Alternatively, you can manually copy the modified `core.py` file into your environment installation directory.
 
 ### 3. Configure API Keys
 
